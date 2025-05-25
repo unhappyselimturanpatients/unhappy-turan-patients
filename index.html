@@ -124,6 +124,8 @@
             box-shadow: var(--shadow);
             border-left: 4px solid var(--accent-color);
             scroll-margin-top: 2rem;
+            min-height: 100px;
+            overflow: visible;
         }
 
         .section h2 {
@@ -240,7 +242,6 @@
             border-radius: 8px;
             margin-bottom: 2rem;
             box-shadow: var(--shadow);
-            position: sticky;
             top: 1rem;
             z-index: 200;
         }
@@ -427,6 +428,12 @@
             .before-after-container img {
                 height: 200px;
             }
+
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
         }
 
         /* Print styles */
@@ -456,18 +463,17 @@
         }
 
         /* Loading animation */
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -1855,14 +1861,6 @@
                 </div>
             </section>
 
-            <footer style="text-align: center; padding: 2rem; color: #666; font-style: italic;">
-                <p>This website is based on patient testimonials and experiences compiled for educational purposes.</p>
-                <p>Always consult with qualified medical professionals before making healthcare decisions.</p>
-                <p style="margin-top: 1rem; font-size: 0.9em;">
-                    Created to inform and protect prospective patients |
-                    Contact: unhappyselimturanpatients@gmail.com
-                </p>
-            </footer>
     </div>
 
     <script>
@@ -1899,7 +1897,16 @@
                 observer.observe(section);
             });
         });
-        </script>
+
+        // Fallback for older/buggy mobile browsers
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                if (!el.classList.contains('visible')) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
