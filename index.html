@@ -183,6 +183,14 @@
             font-weight: bold;
         }
 
+        .patient-testimonial figure:only-child img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
         /* Issues list */
         .issues-list {
             background: #fff5f5;
@@ -313,17 +321,22 @@
             opacity: 0.5;
         }
 
-        /* Image optimization and lazy loading */
+        /* Image optimization */
         img {
             content-visibility: auto;
             contain-intrinsic-size: 0 200px;
-            loading: lazy;
-            decoding: async;
             width: 100%;
             height: auto;
             border-radius: 5px;
             box-shadow: var(--shadow);
             transition: var(--transition);
+        }
+
+        figure img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
 
         img:hover {
@@ -540,7 +553,8 @@
                 <h2>Introduction</h2>
                 <div style="text-align: center; margin: 2rem 0;">
                     <img src="images/image_page1_0.jpeg"
-                        alt="Dr. Selim Turan in his office with certificates on the wall"
+                        alt="Dr. Selim Turan in his office with certificates on the wall" loading="lazy"
+                        decoding="async"
                         style="max-width: 600px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; font-style: italic;">
                         Dr. Selim Turan in his office
@@ -681,9 +695,9 @@
                         Article 12, which protects personal data and requires explicit consent for its use.</p>
 
                     <div style="display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
-                        <img src="images/image_page6_0.jpeg" alt="Example of nostril asymmetry post-surgery"
+                        <img src="images/image_page6_0.jpeg" loading="lazy" decoding="async"
                             style="max-width: 300px; width: 45%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        <img src="images/image_page6_1.jpeg" alt="Another example of nostril asymmetry"
+                        <img src="images/image_page6_1.jpeg" loading="lazy" decoding="async"
                             style="max-width: 300px; width: 45%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                     </div>
                 </div>
@@ -712,11 +726,14 @@
                     <h4>Messages of alleged sexually harrassment of female patient night before surgery </h4>
 
                     <div style="display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
-                        <img src="images/sh_1.jpeg" alt="Screenshot of harassment messages"
+                        <img src="images/sh_1.jpeg" alt="Screenshot of harassment messages" loading="lazy"
+                            decoding="async"
                             style="max-width: 300px; width: 45%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        <img src="images/sh_2.jpeg" alt="Screenshot of harassment messages"
+                        <img src="images/sh_2.jpeg" alt="Screenshot of harassment messages" loading="lazy"
+                            decoding="async"
                             style="max-width: 300px; width: 45%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                        <img src="images/sh_3.jpeg" alt="Screenshot of harassment messages"
+                        <img src="images/sh_3.jpeg" alt="Screenshot of harassment messages" loading="lazy"
+                            decoding="async"
                             style="max-width: 300px; width: 45%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                     </div>
 
@@ -740,8 +757,10 @@
 
                     <div style="display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
                         <img src="images/sh_4.png" alt="Screenshots showing refusal to take accountability"
+                            loading="lazy" decoding="async"
                             style="max-width: 300px; width: 45%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <img src="images/sh_5.png" alt="Screenshots showing refusal to take accountability"
+                            loading="lazy" decoding="async"
                             style="max-width: 300px; width: 45%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                     </div>
                 </div>
@@ -785,7 +804,7 @@
                     <h4>Instagram Video: Public backlash after unsolicited surgery offer</h4>
                     <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
                         <a href="https://www.instagram.com/reel/DDDfkMNu0vK/" target="_blank" rel="noopener noreferrer">
-                            <img src="images/image_page8_0.png" alt="Watch on Instagram"
+                            <img src="images/image_page8_0.png" alt="Watch on Instagram" loading="lazy" decoding="async"
                                 style="max-width: 100%; width: 300px; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         </a>
                     </div>
@@ -925,16 +944,16 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page12_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page12_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page12_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page12_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page13_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page13_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -972,20 +991,20 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page14_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page14_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page14_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page14_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page15_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page15_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page15_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page15_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1015,21 +1034,21 @@
                         style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 800px; margin: 0 auto;">
                         <div>
                             <h6 style="text-align: center; color: #666; margin-bottom: 0.5rem;">OLD NOSE</h6>
-                            <img src="images/image_page16_0.jpeg" alt="Patient 3 - Original nose before surgery"
+                            <img src="images/image_page16_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <img src="images/image_page16_1.jpeg" alt="Patient 3 - Original nose before surgery"
+                            <img src="images/image_page16_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         </div>
 
                         <div>
                             <h6 style="text-align: center; color: #e74c3c; margin-bottom: 0.5rem;">NEW NOSE</h6>
-                            <img src="images/image_page17_0.jpeg" alt="Patient 3 - Result after unconsented procedures"
+                            <img src="images/image_page17_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <img src="images/image_page17_1.jpeg" alt="Patient 3 - Original nose before surgery"
+                            <img src="images/image_page17_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <img src="images/image_page17_2.jpeg" alt="Patient 3 - Original nose before surgery"
+                            <img src="images/image_page17_2.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <img src="images/image_page18_0.jpeg" alt="Patient 3 - Original nose before surgery"
+                            <img src="images/image_page18_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         </div>
                     </div>
@@ -1071,16 +1090,16 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page19_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page19_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page20_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page20_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page20_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page20_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1129,28 +1148,28 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page22_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page22_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page23_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page23_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page24_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page24_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page25_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page25_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page25_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page25_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page26_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page26_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1186,32 +1205,32 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page28_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page28_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page29_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page29_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page29_1.png" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page29_1.png" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page30_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page30_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page30_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page30_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page31_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page31_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page31_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page31_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1224,20 +1243,20 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page32_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page32_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page32_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page32_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page33_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page33_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page33_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page33_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1314,16 +1333,16 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page37_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page37_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page38_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page38_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page38_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page38_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1411,12 +1430,12 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page41_0.png" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page41_0.png" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page42_0.png" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page42_0.png" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1452,7 +1471,7 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page43_0.png" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page43_0.png" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1506,16 +1525,16 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page46_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page46_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page47_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page47_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                         <figure style="margin: 0;">
-                            <img src="images/image_page48_0.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page48_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1546,7 +1565,7 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page49_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page49_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
@@ -1583,12 +1602,12 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page51_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page51_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page51_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page51_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
@@ -1674,12 +1693,12 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
                         <figure style="margin: 0;">
-                            <img src="images/image_page54_0.jpeg" alt="Patient 2 - Side view showing complications"
+                            <img src="images/image_page54_0.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
 
                         <figure style="margin: 0;">
-                            <img src="images/image_page54_1.jpeg" alt="Patient 2 - Frontal view showing asymmetry"
+                            <img src="images/image_page54_1.jpeg" loading="lazy" decoding="async"
                                 style="width: 100%; height: auto; border-radius: 5px;">
                         </figure>
                     </div>
