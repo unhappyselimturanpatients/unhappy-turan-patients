@@ -778,6 +778,59 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Verbatim quoted messages (retaliation section) */
+        .threat-quote {
+            border-left: 4px solid #c53030;
+            background: #ffffff;
+            margin: 1rem 0;
+            padding: 0.75rem 1rem;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .threat-quote cite {
+            display: block;
+            margin-top: 0.4rem;
+            font-size: 0.9rem;
+            font-style: normal;
+            color: #718096;
+        }
+
+        /* Collapsible retaliation items: native <details>, so no JavaScript needed */
+        details.collapsible > summary {
+            cursor: pointer;
+            list-style: none; /* hide the default triangle; we draw our own below */
+        }
+
+        details.collapsible > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.collapsible > summary h3 {
+            margin: 0;
+        }
+
+        details.collapsible > summary::after {
+            content: "\25BC  Read more";
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        details.collapsible[open] > summary::after {
+            content: "\25B2  Hide";
+        }
+
+        details.collapsible[open] > summary {
+            margin-bottom: 1.25rem;
+        }
+
+        .collapsible-summary {
+            margin: 0.5rem 0 0;
+            color: #4a5568;
+        }
+
         /* Figure images (testimonials) */
         .figure-img {
             width: 100%;
@@ -951,6 +1004,7 @@
                 <li><a href="#intro">Introduction</a></li>
                 <li><a href="#warning">Warning About Supporters</a></li>
                 <li><a href="#issues">Class of Issues</a></li>
+                <li><a href="#retaliation">Retaliation Against This Website</a></li>
                 <li><a href="#testimonials">Patient Testimonials</a></li>
                 <li><a href="#contact">Contact Information</a></li>
             </ul>
@@ -1357,6 +1411,93 @@
                         surgery, including chronic fatigue, sinus problems, disrupted sleep, and anxiety. These outcomes
                         were compounded by poor aftercare and reported threats if patients shared their experiences.</p>
                 </div>
+            </section>
+
+            <section id="retaliation" class="section fade-in">
+                <h2>Retaliation Against This Website</h2>
+                <p>This website went live on July 14, 2025. Since then, its author, who is also one of Dr. Turan's
+                    patients, has been targeted in three ways. All quotes are verbatim from the original messages,
+                    and a report has been filed with the New York City Police Department. Click any item to read
+                    more.</p>
+
+                <details class="issues-list collapsible">
+                    <summary>
+                        <h3>1. A Fraudulent Attempt to Take the Site Down</h3>
+                        <p class="collapsible-summary">Someone using a fake name and location filed a copyright complaint claiming this site was copied from a backdated Tumblr post. Even the fake date they chose is nine days after this site went live.</p>
+                    </summary>
+                    <p>Someone copied this website's content onto a fake Tumblr page and backdated it to make it look
+                        like the original. Then, using the fake name <strong>"Gennaro Emmerich"</strong> and a fake location in
+                        Alaska, they filed a copyright takedown complaint (DMCA) with this website's host, Cloudflare,
+                        claiming this site had stolen its content from that Tumblr post.</p>
+                    <p>Both were fake, and the dates prove it:</p>
+                    <ul>
+                        <li>This website's domain was registered and the site went live on <strong>July 14,
+                                2025</strong>.</li>
+                        <li>The Tumblr post was backdated to <strong>July 23, 2025</strong>. Even that fake date is
+                            nine days <em>after</em> this site went live, so the "original" could not have come first.</li>
+                    </ul>
+                    <p>The author filed a counter-notice and the site stayed up. The fake Tumblr page has since been
+                        deleted, but an <a
+                            href="https://web.archive.org/web/20260507191625/https://www.tumblr.com/24todaynewspress/815873046892118016/dr-selim-turans-botched-patients-things-you"
+                            target="_blank" rel="noopener nofollow">archived version is available here</a>.</p>
+                    <p>In a later message to the author, Dr. Turan wrote that he had "told [his assistant] to stop the
+                        taking down the website."</p>
+                </details>
+
+                <details class="issues-list collapsible">
+                    <summary>
+                        <h3>2. Veiled Threats from Dr. Turan</h3>
+                        <p class="collapsible-summary">“give small amount of money any person he can do so many bad things…” and three similar messages.</p>
+                    </summary>
+                    <p>In late May 2026, the author challenged Dr. Turan over the alarplasty he had performed without
+                        consent. His replies included the following:</p>
+                    <blockquote class="threat-quote">"…even some doctors you cannot imagine what they offer me to do
+                        <strong>but</strong> i believe in a pure heart"
+                        <cite>May 27, 2026, 6:04 PM</cite></blockquote>
+                    <blockquote class="threat-quote">"You will see one day"<br>"See you bro"
+                        <cite>May 28, 2026, 1:34 PM</cite></blockquote>
+                    <blockquote class="threat-quote">"First of all beside taking down the website i can do way more
+                        things to you <strong>but</strong> this the not my way i will wait…"
+                        <cite>May 28, 2026, 2:58 PM</cite></blockquote>
+                    <blockquote class="threat-quote">"You can do so many things to me it is so easy so easy everything
+                        like give small amount of money any person he can do so many bad things <strong>but</strong>
+                        you are a good person…"
+                        <cite>May 30, 2026, 5:41 AM</cite></blockquote>
+                    <p>Note the pattern: each statement suggests harm, then immediately softens it with a "but." In the
+                        same May 28 message, he also brought up patients who "even suicide at the end." The author had
+                        never mentioned violence or self-harm. Dr. Turan raised both topics himself.</p>
+                    <p>The author pointed out this pattern to him in writing, said they no longer felt safe, and blocked
+                        his number on May 30, 2026.</p>
+
+                    <div class="flex-gallery">
+                        <img width="1152" height="2048" src="images/threat_4_may30_small_money.webp" alt="WhatsApp message from Dr. Turan, May 30, 2026: 'give small amount of money any person he can do so many bad things', followed by the author's reply listing the four threats" loading="lazy" decoding="async"
+                            class="inline-img">
+                    </div>
+                </details>
+
+                <details class="issues-list collapsible">
+                    <summary>
+                        <h3>3. A Stranger Tries to Meet the Author in New York</h3>
+                        <p class="collapsible-summary">Someone claiming to be his friend asked to meet the author in New York, then tried again after the author blocked him.</p>
+                    </summary>
+                    <ul>
+                        <li><strong>May 19, 2026:</strong> A person the author had never heard of sent a text message.
+                            She said she was "a friend of [his assistant] and Dr Selim" and asked to meet in New York
+                            in June, without giving a reason. The author did not respond.</li>
+                        <li><strong>May 21, 2026:</strong> Two days later, Dr. Turan wrote to the author: "[name redacted] wanted
+                            to contact to talk to you she asked me kindly to talk to to you" and "She asked me what i
+                            ask for."</li>
+                        <li><strong>May 30, 2026:</strong> The author blocked Dr. Turan.</li>
+                        <li><strong>After the block:</strong> The same phone number began calling the author on
+                            WhatsApp under a different display name, and the caller described herself differently than
+                            before. When the author said they did not want to talk about Dr. Turan, she said she would
+                            be in Manhattan and invited the author to come by Ned's Club, adding, "It would all be off
+                            the record."</li>
+                    </ul>
+                    <p>The author did not go, and filed a police report with the NYPD.</p>
+                    <p>A surgeon's associate asking to meet a former patient in person, first while he was in contact
+                        with them and again right after they blocked him, is not normal behavior.</p>
+                </details>
             </section>
 
             <section id="testimonials" class="section">
